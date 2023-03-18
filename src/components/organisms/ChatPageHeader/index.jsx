@@ -8,17 +8,16 @@ import {
     ChatListHeader
 } from '../../molecules';
 
-import { 
-    Box, 
-    styled 
-} from "@mui/system";
+import {
+    ParentContainer
+} from './index.style'
 
 const Component = (props) => {
     return (
-        <>
+        <ParentContainer>
+            <ChatListHeader />
             <ChatHeader />
-            <ChatListHeader />   
-        </>
+        </ParentContainer>
     )
 }
 

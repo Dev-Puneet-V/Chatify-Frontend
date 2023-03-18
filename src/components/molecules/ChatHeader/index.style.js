@@ -1,13 +1,12 @@
 import { styled } from '@mui/material/styles';
 import {
-    Box
+    Box, Typography
 } from '@mui/material';
 
 const ParentContainer = styled(Box)(({ theme }) => {
 
     return {
         width: '100%',
-        maxWidth: theme.spacing(150),
         height: theme.spacing(20),
         display: 'flex',
         flexDirection: 'row',
@@ -51,9 +50,33 @@ const GreenDot = styled(Box)(({ theme }) => {
     };
   });
 
+  const StyledProfileContainer = styled(Box)(({ theme }) => {
+    
+    return {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        maxWidth: theme.spacing(55),
+        color: theme.palette.customColors.lightDarkGrey
+    }
+})
+
+const StyledName = styled(Typography)(({ theme }) => {
+
+    return {
+        fontWeight: 'bold',
+        color: theme.palette.customColors.darkGrey,
+        marginLeft: theme.spacing(2),
+        opacity: '0.75'
+    }
+})
+
 export {
     ParentContainer,
     StyledIcon,
     GreenDot,
-    StyledStatusIcon
+    StyledStatusIcon,
+    StyledProfileContainer,
+    StyledName
 }
