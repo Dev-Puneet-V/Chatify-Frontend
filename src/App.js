@@ -8,7 +8,7 @@ function App() {
   console.log('Cureent user', user);
 
   return (
-    <div className="App">
+    <div>
       {
         // !user && 
         // <button onClick={(e) => {

@@ -1,4 +1,6 @@
-import ChatPageHeader from './ChatPageHeader';
+import ChatBox from './ChatBox';
+import ChatSideBar from './ChatSideBar'
 export {
-    ChatPageHeader
+    ChatBox,
+    ChatSideBar
 }

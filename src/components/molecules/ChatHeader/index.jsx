@@ -1,12 +1,13 @@
 import * as React from "react";
 import {  
-    Box
+    Box,
+    useTheme,
+    useMediaQuery
 } from "@mui/material";
 import {
-    Phone,
+    ArrowBack,
     Search,
-    MoreVert,
-    VideoCall
+    MoreVert
  } from '@mui/icons-material';
 
 import {
@@ -29,8 +30,14 @@ const Component = (props) => {
     const {
         profille_url = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
         name = 'Puneet Verma',
+        onChatItemClick,
         ...rem
     } = props;
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down('sm'));
+    const backButtonHandler = () => {
+        onChatItemClick(undefined);
+    }
     return (
         <ParentContainer {...rem}>
         <StyledProfileContainer>
@@ -46,12 +53,11 @@ const Component = (props) => {
             </StyledName>
         </StyledProfileContainer>
         <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center">
-            <StyledIcon>
-                <Icon  button={true} icon={<Phone />} />
+            
+            {isMobileView && <StyledIcon>
+                <Icon  button={true} icon={<ArrowBack />} onClick={backButtonHandler}/>
             </StyledIcon>
-            <StyledIcon>
-                <Icon icon={<VideoCall />} />
-            </StyledIcon>
+            }
             <StyledIcon>
                 <Icon icon={<Search />} />
             </StyledIcon>

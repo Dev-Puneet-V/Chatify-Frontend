@@ -8,7 +8,7 @@ const ParentContainer = styled(Box)(({ theme }) => {
     return {
         width: '100%',
         maxWidth: theme.spacing(150),
-        height: theme.spacing(20),
+        height: '11.4vh',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',

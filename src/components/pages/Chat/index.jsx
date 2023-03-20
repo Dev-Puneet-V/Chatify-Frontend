@@ -1,5 +1,8 @@
-import * as React from "react";
+import {
+    useState
+} from "react";
 import {  
+    Grid, useMediaQuery, useTheme
 } from "@mui/material";
 import { 
 } from "@mui/icons-material";
@@ -10,14 +13,40 @@ import {
 } from '../../../themes'
 
 import {
-    ChatPageHeader
+    ChatBox,
+    ChatSideBar
 } from '../../organisms';
 
-
+import {
+    ParentContainer
+} from './index.style';
 const Component = (props) => {
+    const [selectedChat, setSelectedChat] = useState();
+    const handleChatItemClick = (item) => {
+        console.log(item)
+        setSelectedChat(item);
+    }
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <ThemeProvider theme={rootTheme}>
-            <ChatPageHeader />
+            {/* <ParentContainer>
+                <ChatSideBar />
+                <ChatBox />
+            </ParentContainer>  */}
+            <Grid container>
+                {
+                    (selectedChat === undefined || !isMobileView) && 
+                    <Grid item xs={12} md={5} lg={3}>
+                        <ChatSideBar onChatItemClick={handleChatItemClick} />
+                    </Grid>
+                }
+                <Grid item xs={12} md={7} lg={9}>
+                    {(selectedChat !== undefined || !isMobileView) && 
+                        <ChatBox chat={selectedChat} onChatItemClick={handleChatItemClick}/>
+                    }
+                </Grid>
+            </Grid>
         </ThemeProvider>
     )
 }

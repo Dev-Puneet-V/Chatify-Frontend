@@ -6,15 +6,17 @@ import {
 const ParentContainer = styled(Box)(({ theme }) => {
 
     return {
+
         width: '100%',
-        height: theme.spacing(20),
+        // maxWidth: theme.spacing(150),
+        height: '11.4vh',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: theme.palette.customColors.lightGrey,
         padding: `${theme.spacing(1)} ${theme.spacing(4)}`,
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
     }
 });
 
