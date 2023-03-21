@@ -91,7 +91,8 @@ const rootTheme = createTheme({
             lightGreen: '#D9FDD3',
             mediumRed: '#EA0038',
             violet: '#C310C7',
-            white: '#FFFFFF'
+            white: '#FFFFFF',
+            skyBlue: 'rgb(25, 118, 210)'
         },
     },
     spacing: (factor) => `${0.25 * factor}rem`

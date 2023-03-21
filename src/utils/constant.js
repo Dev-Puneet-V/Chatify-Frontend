@@ -18,8 +18,21 @@ const ImageType = {
     NORMAL: 'normal'
 }
 
+const MessageVariantType = {
+    SENDER: 'sender',
+    RECEIVER: 'receiver'
+}
+
+const MessageStatus = {
+    READ: 'read',
+    DELIVERED: 'delivered',
+    UNDELIVERED: 'undelivered'
+}
+
 export {
     ImageStatus,
     StatusState,
-    ImageType
+    ImageType,
+    MessageVariantType,
+    MessageStatus
 }

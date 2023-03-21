@@ -9,7 +9,7 @@ const ParentContainer = styled(Box)(({ theme }) => {
 
         width: '100%',
         // maxWidth: theme.spacing(150),
-        height: '11.4vh',
+        height: '11vh',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',

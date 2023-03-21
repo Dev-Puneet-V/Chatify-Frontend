@@ -1,5 +1,10 @@
 import {
-    ChatHeader
+    Box
+} from '@mui/material';
+
+import {
+    ChatHeader,
+    ChatBoxBody
 } from '../../molecules';
 
 const Component = (props) => {
@@ -7,9 +12,13 @@ const Component = (props) => {
         onChatItemClick
     } = props;
     return (
-        <>
+        <Box
+            display='flex'
+            flexDirection='column'
+        >
             <ChatHeader onChatItemClick={onChatItemClick}/> 
-        </> 
+            <ChatBoxBody />
+        </Box> 
     )
 }
 

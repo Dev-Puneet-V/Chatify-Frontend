@@ -16,10 +16,7 @@ import {
     ChatBox,
     ChatSideBar
 } from '../../organisms';
-
-import {
-    ParentContainer
-} from './index.style';
+import { EmptyChats } from "../../molecules";
 const Component = (props) => {
     const [selectedChat, setSelectedChat] = useState();
     const handleChatItemClick = (item) => {
@@ -42,8 +39,12 @@ const Component = (props) => {
                     </Grid>
                 }
                 <Grid item xs={12} md={7} lg={9}>
-                    {(selectedChat !== undefined || !isMobileView) && 
+                    {selectedChat !== undefined && 
                         <ChatBox chat={selectedChat} onChatItemClick={handleChatItemClick}/>
+                    }
+                    {
+                        selectedChat === undefined && !isMobileView &&
+                        <EmptyChats />
                     }
                 </Grid>
             </Grid>
