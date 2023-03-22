@@ -9,14 +9,15 @@ import {
 
 const Component = (props) => {
     const {
-        onChatItemClick
+        onChatItemClick,
+        setContactVisibility
     } = props;
     return (
         <Box
             display='flex'
             flexDirection='column'
         >
-            <ChatHeader onChatItemClick={onChatItemClick}/> 
+            <ChatHeader onChatItemClick={onChatItemClick} setContactVisibility={setContactVisibility}/> 
             <ChatBoxBody />
         </Box> 
     )

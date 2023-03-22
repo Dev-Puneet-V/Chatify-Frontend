@@ -32,6 +32,7 @@ const Component = (props) => {
                 props.type !== ImageType.PROFILE && 
                     <Box
                         component='img'
+                        sx={{cursor: 'pointer'}}
                         {...memoizedImageProps}
                     />
             }

@@ -12,7 +12,6 @@ const ParentContainer = styled(Box)(({ theme }) => {
         flexWrap: 'no-wrap'
     }
 });
-
 export {
     ParentContainer
 }

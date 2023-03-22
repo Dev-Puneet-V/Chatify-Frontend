@@ -11,7 +11,8 @@ import {
 
 const Component = (props) => {
     const {
-        onChatItemClick
+        onChatItemClick,
+        setProfileVisibility
     } = props;
     return (
         <Stack
@@ -21,7 +22,7 @@ const Component = (props) => {
             alignItems='center'
             height='96vh'
         >
-        <ChatListHeader />
+        <ChatListHeader setProfileVisibility={setProfileVisibility}/>
           <ProfileSearchHeader />
             <ChatSideBarBody onChatItemClick={onChatItemClick}/>
         </Stack>       

@@ -31,6 +31,7 @@ const Component = (props) => {
         profille_url = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
         name = 'Puneet Verma',
         onChatItemClick,
+        setContactVisibility,
         ...rem
     } = props;
     const theme = useTheme();
@@ -46,7 +47,8 @@ const Component = (props) => {
                 alt="Image not found"
                 type={ImageType.PROFILE}
                 statusState={StatusState.SEEN}
-                status={ImageStatus.STATUS}
+                status={ImageStatus.STATUS}  
+                onClick={() => setContactVisibility(true)}
             />
             <StyledName>
                 {name}

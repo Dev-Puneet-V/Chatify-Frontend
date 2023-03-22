@@ -25,6 +25,9 @@ import {
 } from '../../../utils';
 
 const Component = (props) => {
+    const {
+        setProfileVisibility
+    } = props;
     return (
         <ParentContainer>
         <Box>
@@ -34,6 +37,7 @@ const Component = (props) => {
                 type={ImageType.PROFILE}
                 statusState={StatusState.UNSEEN}
                 status={ImageStatus.STATUS}
+                onClick={() => setProfileVisibility(true)}
             />
         </Box>
         <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center">

@@ -31,7 +31,7 @@ const Component = (props) => {
         profile_url,
         name,
         lastMessageInfo, // user name, phone number, time, message,
-        onClick
+        onClick,
     } = props;
 
     return (

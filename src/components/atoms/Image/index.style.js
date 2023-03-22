@@ -21,6 +21,7 @@ const ProfileImage = styled(Box)(({ theme, statusState, status }) => {
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: theme.spacing(0.50),
+        cursor: 'pointer',
         borderStyle: (status === ImageStatus.STATUS && statusState === StatusState.UNSEEN && 'dashed') || (statusState === StatusState.UNSEEN && 'solid')
     }
 });
