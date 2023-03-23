@@ -7,7 +7,6 @@ const ParentContainer = styled(Box)(({ theme, button }) => {
     return {
         width: '100%',
         maxWidth: theme.spacing(150),
-        marginTop: theme.spacing(2),
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -60,6 +59,7 @@ const ChildrenContainer = styled(Box)(({ theme, status }) => {
         borderBottom: '1px solid lightgrey',
         padding: status && theme.spacing(2),
         paddingBottom : theme.spacing(8),
+        alignSelf: 'flex-end',
         height: '43%',
         width: '100%',
         display: 'flex',

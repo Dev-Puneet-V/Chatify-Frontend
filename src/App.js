@@ -10,6 +10,8 @@ import {
 import {
   rootTheme
 } from './themes';
+// write a program to add 2 number
+
 function App() {
   const { user, loginWithRedirect, logout } = useAuth0();
 
@@ -17,7 +19,6 @@ function App() {
   const handleAuthentication = () => {
     setLoggedIn(true);
   }
-
   return (
     <ThemeProvider theme={rootTheme}>
       <div>
