@@ -1,11 +1,12 @@
 import {
   useState
 } from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
 import { ThemeProvider } from '@mui/material/styles';
+import {  Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import {
   Chat,
-  Auth
+  SignIn,
+  SignUp
 } from './components/pages';
 import {
   rootTheme
@@ -13,7 +14,6 @@ import {
 // write a program to add 2 number
 
 function App() {
-  const { user, loginWithRedirect, logout } = useAuth0();
 
   const [loggedIn, setLoggedIn] = useState(false);
   const handleAuthentication = () => {
@@ -22,30 +22,11 @@ function App() {
   return (
     <ThemeProvider theme={rootTheme}>
       <div>
-        {
-          // !user && 
-          // <button onClick={(e) => {
-          //   loginWithRedirect()
-            
-          // }} >
-          //   Login with Redirect
-          // </button>
-        }
-        {
-          // user && 
-          <>
-            {/* <button onClick={(e) => {logout(); alert(JSON.stringify(user))}}>
-              Logout
-            </button> */}
-          </>
-        }
-        {
-          !loggedIn &&
-          <Auth setAuth={handleAuthentication}/>
-        }
-        { loggedIn &&
-          <Chat />
-        }
+      <Routes>
+        <Route path='login' element={<SignIn />} />
+        <Route path='signup' element={<SignUp />} />
+        <Route path='home' element={<Chat />} />
+      </Routes>
       </div>
     </ThemeProvider>
   );

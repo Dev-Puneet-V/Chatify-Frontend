@@ -1,6 +1,8 @@
 import Chat from './Chat';
-import Auth from './Auth';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 export {
     Chat,
-    Auth
+    SignIn,
+    SignUp
 }

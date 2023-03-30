@@ -29,10 +29,27 @@ const MessageStatus = {
     UNDELIVERED: 'undelivered'
 }
 
+const apiBaseUrl = 'http://localhost:4000/';
+
+const URL = {
+    registrationUrl: apiBaseUrl + '/user/register',
+    loginUrl: apiBaseUrl + '/user/login'
+}
+
+const REQUEST_METHOD_TYPES = {
+    GET: 'GET',
+    POST: 'POST',
+    PUT: 'PUT',
+    DELETE: 'DELETE'
+};
+
 export {
     ImageStatus,
     StatusState,
     ImageType,
     MessageVariantType,
-    MessageStatus
+    MessageStatus,
+    apiBaseUrl,
+    URL,
+    REQUEST_METHOD_TYPES
 }
